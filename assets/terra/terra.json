@@ -1,0 +1,29 @@
+{"frames": {
+
+    "Terra_walk_front_1.png":
+        {
+            "frame": {"x":1,"y":0,"w":15,"h":24},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceFile": {"x":1,"y":0,"w":15,"h":24},
+            "sourceSize": {"w":15,"h":24}
+        }
+    ,
+    "Terra_walk_front_2.png":
+        {
+            "frame": {"x":16,"y":0,"w":15,"h":24},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceFile": {"x":1,"y":0,"w":15,"h":24},
+            "sourceSize": {"w":15,"h":24}
+        },
+    "Terra_walk_front_3.png":
+        {
+            "frame": {"x":31,"y":0,"w":15,"h":24},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceFile": {"x":1,"y":0,"w":15,"h":24},
+            "sourceSize": {"w":15,"h":24}
+        }
+    }
+}
