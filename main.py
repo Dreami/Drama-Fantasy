@@ -2,76 +2,58 @@ import sys
 import pygame as pg
 from sprites import *
 from config import *
-import renderer
+from LoadArea import *
 
 class Game:
     def __init__(self):
         pg.init()
         self.clock = pg.time.Clock()
         self.running = True
+        self.playing = False
 
     def intro_menu(self):
         self.state = 'intro_menu'
-        self.new()
+        self.all_sprites = pg.sprite.LayeredUpdates()
+        self.intro = LoadIntro(self)
         while self.state == 'intro_menu':
             self.events()
             self.update()
-            MS.fill(BLUE)
-            self.all_sprites.draw(MS)
-            self.clock.tick(FPS)
-
-            MS.blit(self.intro_terra.image, self.intro_terra.rect)
-            MS.blit(self.intro_locke.image, self.intro_locke.rect)
-            self.resized_screen = pg.transform.scale(MS,(WIN_WIDTH, WIN_HEIGHT))
-            WIN.blit(self.resized_screen, (0,0))
-            pg.display.update()
-        
-    def new(self):
-        self.all_sprites = pg.sprite.LayeredUpdates()
-        if self.state == 'intro_menu':
-            self.intro_terra = Character('assets/terra/Terra.png', self, INTRO_TERRA_X, INTRO_Y)
-            self.intro_locke = Character('assets/locke/Locke.png', self, INTRO_LOCKE_X, INTRO_Y)
-            
-        elif self.state == 'main':
-            self.playing = True
-            
-            self.map_floor = renderer.Renderer(self, 'assets/fishing_floor.tmx')
-            self.map_floor_surface = self.map_floor.make_map()
-            self.map_floor_rect = self.map_floor_surface.get_rect()
-            
-            self.player = Player('assets/terra/Terra.png', self, 1, 1)
-
-            self.map_top = renderer.Renderer(self, 'assets/fishing_top.tmx')
-            self.map_top_surface = self.map_top.make_map()
-            self.map_top_rect = self.map_top_surface.get_rect()
+            self.draw()
+            if self.playing == True:
+                self.state = 'main'
         
     def events(self):
         # game loop events
+        keys = pg.key.get_pressed()
         for event in pg.event.get():
-            if event.type == pg.QUIT:
+            if event.type == pg.QUIT or keys[pg.K_ESCAPE]:
                 self.playing = False
                 self.running = False
-            elif pg.key.get_pressed()[pg.K_RETURN]:
-                self.state = 'main'
+            elif self.state == 'intro_menu' and keys[pg.K_RETURN]:
+                self.intro.pressed_start()
+                self.playing = True
 
     def update(self):
         self.all_sprites.update()
 
     def draw(self):
-        # game loop draw
-        MS.fill(BLUE)
-        self.all_sprites.draw(MS)
+        #self.all_sprites.draw(MS)
         self.clock.tick(FPS)
-        MS.blit(self.map_floor_surface, self.map_floor_rect)
-        MS.blit(self.player.image, self.player.rect)
-        MS.blit(self.map_top_surface, self.map_top_rect)
+
+        if self.state == 'intro_menu':
+            self.intro.draw()
+            
+        elif self.state == 'main':
+            # game loop draw
+            self.area.draw()
+        
         self.resized_screen = pg.transform.scale(MS,(WIN_WIDTH, WIN_HEIGHT))
         WIN.blit(self.resized_screen, (0,0))
         pg.display.update()
 
     def main(self):
         # Game loop
-        g.new()
+        self.area = LoadArea(self, 'fishing', LOCKE_ASSET)
         while self.playing:
             self.events()
             self.update()

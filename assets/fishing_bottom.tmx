@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="15" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="1">
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="15" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="1">
  <tileset firstgid="1" source="solitary_island_simplified.tsx"/>
- <tileset firstgid="533" source="mobliz.tsx"/>
- <tileset firstgid="5453" source="locke_1.tsx"/>
+ <tileset firstgid="435" source="mobliz.tsx"/>
+ <tileset firstgid="5355" source="locke_1.tsx"/>
  <layer id="1" name="Floor" width="15" height="14" locked="1">
   <data encoding="csv">
 97,97,97,1,1,1,1,1,1,1,1,1,1,190,190,
@@ -37,24 +37,6 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
- <layer id="3" name="Rocks" width="15" height="14" locked="1">
-  <data encoding="csv">
-0,0,0,0,0,0,7,8,9,10,11,12,13,14,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,100,101,0,0,0,0,0,0,0,
-125,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-156,157,158,0,0,0,0,0,0,0,0,0,0,0,0,
-187,188,189,0,0,0,0,0,0,0,0,0,0,0,0,
-218,219,220,0,0,0,0,0,0,0,0,0,0,0,0,
-249,250,251,0,0,0,0,0,0,0,0,0,0,0,0,
-280,281,282,0,0,0,0,0,0,0,0,0,0,0,0,
-311,312,313,0,0,0,0,0,0,0,0,0,0,0,0,
-342,343,344,345,0,0,0,0,0,0,0,0,0,0,0,
-373,374,375,376,0,0,0,0,0,0,0,0,0,0,0,
-404,405,406,407,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
 </map>

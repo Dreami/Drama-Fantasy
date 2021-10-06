@@ -7,7 +7,7 @@ class Renderer(object):
     """
     This object renders tile maps from Tiled
     """
-    def __init__(self, game, filename):
+    def __init__(self, filename):
         tm = pytmx.load_pygame(filename, pixelalpha=True)
         self.size = tm.width * tm.tilewidth, tm.height * tm.tileheight
         self.tmx_data = tm

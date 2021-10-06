@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="15" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="1">
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="15" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="1">
  <tileset firstgid="1" source="solitary_island_simplified.tsx"/>
- <tileset firstgid="497" source="mobliz.tsx"/>
- <tileset firstgid="5417" source="locke_1.tsx"/>
+ <tileset firstgid="435" source="mobliz.tsx"/>
+ <tileset firstgid="5355" source="locke_1.tsx"/>
  <layer id="3" name="Rocks" width="15" height="14">
   <data encoding="csv">
-0,0,0,0,0,0,7,8,9,10,11,12,13,14,15,
-0,0,0,0,0,0,38,39,40,41,42,43,44,45,46,
+0,0,0,0,0,0,7,8,9,10,11,12,13,14,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,95,96,0,0,0,100,101,0,0,0,0,0,0,0,
-125,0,0,0,0,0,131,132,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,100,101,0,0,0,0,0,0,0,
+125,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 156,157,158,0,0,0,0,0,0,0,0,0,0,0,0,
 187,188,189,0,0,0,0,0,0,0,0,0,0,0,0,
 218,219,220,0,0,0,0,0,0,0,0,0,0,0,0,
